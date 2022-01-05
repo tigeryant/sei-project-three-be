@@ -521,6 +521,9 @@ export default [
       'Add thinly sliced Brussels sprouts and toss until completely coated',
       'Let sit, tossing occasionally, for at least 20 minutes and up to 4 hours before serving',
       'Fold in chopped almonds and pomegranate seeds, and garnish with Parmesan before serving.'
+    ],
+  },
+  {
     course: 'Dinner',
     title: 'Chicken breast with creamy garlic-dijon sauce',
     image: 'https://cdn.app.eative.com/5fb639bc1c559992388804.jpg',
@@ -546,7 +549,7 @@ export default [
       'Drizzle lemon juice on chicken and tent it with foil',
       'Add minced garlic to the skillet with oil set over medium heat, sauté until just barely golden brown for about 20 - 30 seconds; Whisk cream mixture once more and then pour it into the skillet; Cook and stir, bringing to a simmer',
       'Let it simmer gently, while stirring, for about 1 minute; then remove from heat, return meat to pan and spoon sauce over it',
-      'Serve warm and enjoy!'      
+      'Serve warm and enjoy!'
     ],
   },
   {
@@ -574,7 +577,7 @@ export default [
       'Transfer them to a plate, leaving the garlic in the skillet',
       'Add 1-2 tablespoons of water, 2 tsp lemon juice, minced parsley and crushed red pepper flakes to the pan, and cook until sizzling',
       'Pour the garlic dressing over the lamb chops and serve immediately.'
-    ], 
+    ],
   },
   {
     course: 'Dinner',
@@ -648,7 +651,7 @@ export default [
       '4.5oz / 130g turkey breast fillet or tenderloin',
       'A pinch of paprika powder',
       'A pinch of turmeric powder',
-      'A pinch of ginger powder'       
+      'A pinch of ginger powder'
     ],
     preparation: [
       'Trim turkey of any fat, skin, or stray pieces of cartilage or bone; Wash, drain, and pat dry',
@@ -976,7 +979,7 @@ export default [
     fats: 15,
     ingredients: [
       '3 slices deli turkey meat or turkey ham',
-      '3 slices edam cheese'   
+      '3 slices edam cheese'
     ],
     preparation: [
       'Roll the slices of turkey and cheese together and form 2 tools',
