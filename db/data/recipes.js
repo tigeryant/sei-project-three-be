@@ -3,19 +3,11 @@ export default [
     course: 'Breakfast',
     title: 'Omelette with Turkey and Spinach',
     image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
-<<<<<<< HEAD
-    prepTime: '12 mins',
-    calories: '333Kcal',
-    protein: '23g',
-    carbs: '5g',
-    fats: '24g',
-=======
     prepTime: 12,
     calories: 333,
     protein: 23,
     carbs: 5,
     fats: 24,
->>>>>>> development
     ingredients: [
       '2 small egg/s',
       '2 teaspoons butter',
