@@ -103,5 +103,45 @@ export default [
       'Microwave for 60 seconds, or until just cooked in the center',
       '•	For the glaze, pour some a coconut milk and coconut oil in a small bowl, and microwave for a few seconds; then add the cinnamon and one drop of stevia; mix and pour over mug cake.'
     ],
+  },
+  {
+    course: 'Snack',
+    title: 'Tomato and cucumber bites with avocado',
+    image: 'https://cdn.app.eative.com/5f0f07dd55d83101275236.jpeg',
+    prepTime: 7,
+    calories: 256,
+    protein: 3,
+    carbs: 12,
+    fats: 25,
+    ingredients: [
+      '1 tablespoon virgin olive oil',
+      '1/2 small cucumber/s',
+      '1/2 tomato/es',
+      '1 small celery rib/s',
+      '1/2 small avocado/s'
+    ],
+    preparation: [
+      'Place chopped cucumber, tomato, avocado and celery into a bowl',
+      'Add olive oil, salt and pepper to taste, and enjoy!'
+    ],
+  },
+  {
+    course: 'Snack',
+    title: 'Crunchy cheese “crackers”',
+    image: 'https://cdn.app.eative.com/5ed51886dba8f545451663.jpg',
+    prepTime: 7,
+    calories: 181,
+    protein: 17,
+    carbs: 0,
+    fats: 13,
+    ingredients: [
+      '3.5oz / 100g shredded parmesan cheese'
+    ],
+    preparation: [
+      'Preheat oven to 360°F / 180°C; Line a pan with non-stick baking paper',
+      'Put small groups of cheese on it (in pancake shape) and bake until they have turned a golden color',
+      'Do not overcook, otherwise crackers will be bitter',
+      'Allow to cool and enjoy!'
+    ],
   }
 ]
