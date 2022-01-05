@@ -2,7 +2,7 @@ import express from 'express'
 import router from './config/router.js'
 import logger from './lib/logger.js'
 import errorHandler from './lib/errorHandler.js'
-import { connectToDb } from './db/helpers.js'
+import { connectDb } from './db/helpers.js'
 import { port } from './config/environment.js'
 
 const app = express()
@@ -15,7 +15,7 @@ app.use(errorHandler)
 
 async function startSever() {
   try {
-    await connectToDb()
+    await connectDb()
     console.log('🤖 Database connected')
     app.listen(port, () => console.log(`🤖 Listening on Port: ${port}`))
   } catch (err) {

@@ -10,8 +10,8 @@ const recipeSchema = new mongoose.Schema({
   protein: { type: Number, required: true },
   carbs: { type: Number, required: true },
   fats: { type: Number, required: true },
-  ingredients: { type: String, required: true },
-  preparation: { type: String, required: true },
+  ingredients: { type: Array, required: true },
+  preparation: { type: Array, required: true },
 })
 
 recipeSchema.plugin(mongooseUniqueValidator)
