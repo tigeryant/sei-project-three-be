@@ -54,5 +54,29 @@ export default [
       'Return meat to skillet and season with spices to taste',
       'Transfer cheese cups to a serving platter; Fill with cooked ground beef, and top with sour cream and chopped tomato.'
     ],
+  },
+  {
+    course: 'Snacks',
+    title: 'Low carb cinnamon roll mug cake',
+    image: 'https://cdn.app.eative.com/5fa3da1a62d80134465079.jpg',
+    prepTime: 5,
+    calories: 208,
+    protein: 1,
+    carbs: 10,
+    fats: 17,
+    ingredients: [
+      '1 tbsp coconut oil',
+      '1 tsp cinnamon powder',
+      '1 tsp vanilla extract',
+      '1/4 cup coconut milk',
+      '1 tsp / 4 drops stevia',
+      '1/2 tsp baking powder',
+      '1 tbsp coconut flour'
+    ],
+    preparation: [
+      'Grease a microwave safe bowl with a bit of coconut oil, and add baking powder, coconut flour, vanilla extract, cinnamon, stevia and coconut milk; mix well until a very thick batter is formed',
+      'Microwave for 60 seconds, or until just cooked in the center',
+      '•	For the glaze, pour some a coconut milk and coconut oil in a small bowl, and microwave for a few seconds; then add the cinnamon and one drop of stevia; mix and pour over mug cake.'
+    ],
   }
 ]
