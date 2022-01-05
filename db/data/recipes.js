@@ -81,7 +81,7 @@ export default [
     ],
   },
   {
-    course: 'Snacks',
+    course: 'Snack',
     title: 'Low carb cinnamon roll mug cake',
     image: 'https://cdn.app.eative.com/5fa3da1a62d80134465079.jpg',
     prepTime: 5,
