@@ -1,5 +1,29 @@
 export default [
   {
+    course: 'Breakfast',
+    title: 'Omelette with Turkey and Spinach',
+    image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
+    prepTime: 12,
+    calories: 333,
+    protein: 23,
+    carbs: 5,
+    fats: 24,
+    ingredients: [
+      '2 small egg/s',
+      '2 teaspoons butter',
+      '1 cup fresh spinach',
+      '2 slices deli turkey meat or turkey ham',
+      '1 garlic clove/s'
+    ],
+    preparation: [
+      'Crack the eggs into a mixing bowl, with a pinch of salt and pepper, and whisk them with a fork (you can add additional spices if desired)',
+      'Melt butter in a frying pan and add finely chopped garlic',
+      'Once the garlic turns golden, add spinach leaves (as many as you want) and turkey; sauté over medium-high heat',
+      'Pour in the egg mixture; When the omelette is almost done, sprinkle chopped green onion (optional) on top',
+      'Once ready, carefully and with a spatula, slide the omelette onto a plate.'
+    ],
+  },
+  {
     course: 'Lunch',
     title: 'Keto taco cups',
     image: 'https://cdn.app.eative.com/5ee7888028163798738214.jpeg',
@@ -54,6 +78,30 @@ export default [
       'In a bowl, combine and mix together the chicken, egg, hot sauce, previous sautéed veggies, and flours; Add salt to taste',
       'Using your hands, form them into meatballs and place them on the prepared baking sheet',
       'Bake for about 15 minutes.'
+    ],
+  },
+  {
+    course: 'Snacks',
+    title: 'Low carb cinnamon roll mug cake',
+    image: 'https://cdn.app.eative.com/5fa3da1a62d80134465079.jpg',
+    prepTime: 5,
+    calories: 208,
+    protein: 1,
+    carbs: 10,
+    fats: 17,
+    ingredients: [
+      '1 tbsp coconut oil',
+      '1 tsp cinnamon powder',
+      '1 tsp vanilla extract',
+      '1/4 cup coconut milk',
+      '1 tsp / 4 drops stevia',
+      '1/2 tsp baking powder',
+      '1 tbsp coconut flour'
+    ],
+    preparation: [
+      'Grease a microwave safe bowl with a bit of coconut oil, and add baking powder, coconut flour, vanilla extract, cinnamon, stevia and coconut milk; mix well until a very thick batter is formed',
+      'Microwave for 60 seconds, or until just cooked in the center',
+      '•	For the glaze, pour some a coconut milk and coconut oil in a small bowl, and microwave for a few seconds; then add the cinnamon and one drop of stevia; mix and pour over mug cake.'
     ],
   }
 ]
