@@ -1,8 +1,5 @@
 export default [
   {
-<<<<<<< Updated upstream
-    course: 'lunch',
-=======
     course: 'Breakfast',
     title: 'Omelette with Turkey and Spinach',
     image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
@@ -28,7 +25,6 @@ export default [
   },
   {
     course: 'Lunch',
->>>>>>> Stashed changes
     title: 'Keto taco cups',
     image: 'https://cdn.app.eative.com/5ee7888028163798738214.jpeg',
     prepTime: 30,
