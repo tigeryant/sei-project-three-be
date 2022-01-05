@@ -1,5 +1,6 @@
 export default [
   {
+<<<<<<< HEAD
     course: 'Breakfast',
     title: 'Omelette with Turkey and Spinach',
     image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
@@ -24,6 +25,8 @@ export default [
     ],
   },
   {
+=======
+>>>>>>> 0ef1a49 (recipe format)
     course: 'lunch',
     title: 'Keto taco cups',
     image: 'https://cdn.app.eative.com/5ee7888028163798738214.jpeg',
