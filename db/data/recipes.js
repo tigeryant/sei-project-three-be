@@ -3,11 +3,11 @@ export default [
     course: 'Breakfast',
     title: 'Omelette with Turkey and Spinach',
     image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
-    prepTime: '12 mins',
-    calories: '333Kcal',
-    protein: '23g',
-    carbs: '5g',
-    fats: '24g',
+    prepTime: 12,
+    calories: 333,
+    protein: 23,
+    carbs: 5,
+    fats: 24,
     ingredients: [
       '2 small egg/s',
       '2 teaspoons butter',
@@ -24,11 +24,11 @@ export default [
     ],
   },
   {
-    course: 'lunch',
+    course: 'Lunch',
     title: 'Keto taco cups',
     image: 'https://cdn.app.eative.com/5ee7888028163798738214.jpeg',
     prepTime: 30,
-    calories: 406,   
+    calories: 406,
     protein: 30,
     carbs: 2,
     fats: 30,
@@ -53,6 +53,34 @@ export default [
     ],
   },
   {
+    course: 'Lunch',
+    title: 'Buffalo chicken meatballs',
+    image: 'https://cdn.app.eative.com/5ff46b1289828143238615.jpg',
+    prepTime: 20,
+    calories: 423,
+    protein: 40,
+    carbs: 10,
+    fats: 25,
+    ingredients: [
+      '1 egg/s',
+      'A pinch of salt',
+      '2 celery rib/s',
+      '1 tbsp coconut oil',
+      '1/4 small onion/s',
+      '1 tbsp hot pepper sauce',
+      '1 garlic clove/s',
+      '1 tbsp coconut flour',
+      '4.2oz / 120g ground chicken'
+    ],
+    preparation: [
+      'Preheat oven to 425°F/220°C, and line a baking sheet with parchment paper',
+      'In a skillet on medium-high heat, add coconut oil, diced celery, minced onion, and chopped garlic; Sauté until translucent',
+      'In a bowl, combine and mix together the chicken, egg, hot sauce, previous sautéed veggies, and flours; Add salt to taste',
+      'Using your hands, form them into meatballs and place them on the prepared baking sheet',
+      'Bake for about 15 minutes.'
+    ],
+  },
+  {
     course: 'Snacks',
     title: 'Low carb cinnamon roll mug cake',
     image: 'https://cdn.app.eative.com/5fa3da1a62d80134465079.jpg',
@@ -74,6 +102,46 @@ export default [
       'Grease a microwave safe bowl with a bit of coconut oil, and add baking powder, coconut flour, vanilla extract, cinnamon, stevia and coconut milk; mix well until a very thick batter is formed',
       'Microwave for 60 seconds, or until just cooked in the center',
       '•	For the glaze, pour some a coconut milk and coconut oil in a small bowl, and microwave for a few seconds; then add the cinnamon and one drop of stevia; mix and pour over mug cake.'
+    ],
+  },
+  {
+    course: 'Snack',
+    title: 'Tomato and cucumber bites with avocado',
+    image: 'https://cdn.app.eative.com/5f0f07dd55d83101275236.jpeg',
+    prepTime: 7,
+    calories: 256,
+    protein: 3,
+    carbs: 12,
+    fats: 25,
+    ingredients: [
+      '1 tablespoon virgin olive oil',
+      '1/2 small cucumber/s',
+      '1/2 tomato/es',
+      '1 small celery rib/s',
+      '1/2 small avocado/s'
+    ],
+    preparation: [
+      'Place chopped cucumber, tomato, avocado and celery into a bowl',
+      'Add olive oil, salt and pepper to taste, and enjoy!'
+    ],
+  },
+  {
+    course: 'Snack',
+    title: 'Crunchy cheese “crackers”',
+    image: 'https://cdn.app.eative.com/5ed51886dba8f545451663.jpg',
+    prepTime: 7,
+    calories: 181,
+    protein: 17,
+    carbs: 0,
+    fats: 13,
+    ingredients: [
+      '3.5oz / 100g shredded parmesan cheese'
+    ],
+    preparation: [
+      'Preheat oven to 360°F / 180°C; Line a pan with non-stick baking paper',
+      'Put small groups of cheese on it (in pancake shape) and bake until they have turned a golden color',
+      'Do not overcook, otherwise crackers will be bitter',
+      'Allow to cool and enjoy!'
     ],
   }
 ]
