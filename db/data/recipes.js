@@ -1,6 +1,34 @@
 export default [
   {
+<<<<<<< Updated upstream
     course: 'lunch',
+=======
+    course: 'Breakfast',
+    title: 'Omelette with Turkey and Spinach',
+    image: 'https://cdn.app.eative.com/5fb516b34bf1f709598740.jpg',
+    prepTime: '12 mins',
+    calories: '333Kcal',
+    protein: '23g',
+    carbs: '5g',
+    fats: '24g',
+    ingredients: [
+      '2 small egg/s',
+      '2 teaspoons butter',
+      '1 cup fresh spinach',
+      '2 slices deli turkey meat or turkey ham',
+      '1 garlic clove/s'
+    ],
+    preparation: [
+      'Crack the eggs into a mixing bowl, with a pinch of salt and pepper, and whisk them with a fork (you can add additional spices if desired)',
+      'Melt butter in a frying pan and add finely chopped garlic',
+      'Once the garlic turns golden, add spinach leaves (as many as you want) and turkey; sauté over medium-high heat',
+      'Pour in the egg mixture; When the omelette is almost done, sprinkle chopped green onion (optional) on top',
+      'Once ready, carefully and with a spatula, slide the omelette onto a plate.'
+    ],
+  },
+  {
+    course: 'Lunch',
+>>>>>>> Stashed changes
     title: 'Keto taco cups',
     image: 'https://cdn.app.eative.com/5ee7888028163798738214.jpeg',
     prepTime: 30,
