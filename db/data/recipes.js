@@ -105,7 +105,7 @@ export default [
     ],
   },
   {
-    course: 'Snack',
+    course: 'Snacks',
     title: 'Tomato and cucumber bites with avocado',
     image: 'https://cdn.app.eative.com/5f0f07dd55d83101275236.jpeg',
     prepTime: 7,
@@ -126,7 +126,7 @@ export default [
     ],
   },
   {
-    course: 'Snack',
+    course: 'Snacks',
     title: 'Crunchy cheese “crackers”',
     image: 'https://cdn.app.eative.com/5ed51886dba8f545451663.jpg',
     prepTime: 7,
