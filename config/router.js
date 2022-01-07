@@ -7,12 +7,12 @@ const router = express.Router()
 
 router.route('/recipes')
   .get(recipes.index)
-  .post(secureRoute, recipes.create)
+  // .post(secureRoute, recipes.create)
 
 router.route('/recipes/:recipeId')
   .get(recipes.show)
-  .put(secureRoute, recipes.update)
-  .delete(secureRoute, recipes.delete)
+  // .put(secureRoute, recipes.update)
+  // .delete(secureRoute, recipes.delete)
 
 router.route('/recipes/:recipeId/comments')
   .post(secureRoute, recipes.commentCreate)

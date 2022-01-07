@@ -29,7 +29,6 @@ async function seed() {
     })
 
     const recipe = await Recipe.create(recipeData)
-
     console.log(`🤖 ${recipe.length} Recipe added to the database`)
     console.log('Good bye')
   } catch (err) {
