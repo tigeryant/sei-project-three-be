@@ -1,4 +1,4 @@
-import  mongoose  from 'mongoose'
+import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, unique: true, required: true },
   username: { type: String, unique: true, maxlength: 50, required: true },
   password: { type: String, required: true },
-  profileImage: { type: String, required: false  },
+  profileImage: { type: String, required: false },
   isAdmin: { type: Boolean, default: false },
 })
 
@@ -21,12 +21,12 @@ userSchema.set('toJSON', {
 
 userSchema
   .virtual('passwordConfirmation')
-  .set(function(passwordConfirmation) {
+  .set(function (passwordConfirmation) {
     this._passwordConfirmation = passwordConfirmation
   })
 
 userSchema
-  .pre('validate', function(next) {
+  .pre('validate', function (next) {
     if (this.isModified('password') && this.password !== this._passwordConfirmation) {
       this.invalidate('passwordConfirmation', 'does not match')
     }
@@ -34,14 +34,14 @@ userSchema
   })
 
 userSchema
-  .pre('save', function(next) {
+  .pre('save', function (next) {
     if (this.isModified('password')) {
       this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())
     }
     next()
   })
 
-userSchema.methods.validatePassword = function(password) {
+userSchema.methods.validatePassword = function (password) {
   return bcrypt.compareSync(password, this.password)
 }
 
