@@ -2,6 +2,7 @@ import express from 'express'
 import recipes from '../controllers/recipes.js'
 import auth from '../controllers/auth.js'
 import secureRoute from '../lib/secureRoute.js'
+import profile from '../controllers/profile.js'
 
 const router = express.Router()
 
@@ -22,5 +23,10 @@ router.route('/recipes/:recipeId/comments/:commentId')
 
 router.post('/register', auth.register)
 router.post('/login', auth.login)
+
+// profile
+router.route('/profile')
+  .get(profile.getInfo)
+
 
 export default router
