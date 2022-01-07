@@ -1,6 +1,15 @@
 import  mongoose  from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
+const commentSchema = new mongoose.Schema({
+  text: { type: String, required: true, maxlength: 200 },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+},{
+  timestamps: true,
+}
+)
+
 const recipeSchema = new mongoose.Schema({
   course: { type: String, required: true },
   title: { type: String, required: true, unique: true },
@@ -12,6 +21,9 @@ const recipeSchema = new mongoose.Schema({
   fats: { type: Number, required: true },
   ingredients: { type: Array, required: true },
   preparation: { type: Array, required: true },
+  comments: [commentSchema],
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  caughtBy: [{ type: mongoose.Schema.ObjectId, ref: 'User', required: true }],
 })
 
 recipeSchema.plugin(mongooseUniqueValidator)
