@@ -1,8 +1,6 @@
 import { NotFound, Unauthorized } from '../lib/errors.js'
 import Recipe from '../models/recipe.js'
 
-
-
 async function recipeIndex (_req, res, next) {
   try {
     const recipes = await Recipe.find()

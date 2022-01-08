@@ -18,7 +18,7 @@ async function seed() {
       username: 'admin',
       password: 'pass',
       passwordConfirmation: 'pass',
-      profileImage: 'some-image.jpg',
+      profileImage: 'https://res.cloudinary.com/dlqztlbrv/image/upload/v1641490303/ketokitchen-sei-project-3/tvciqususmfbud2sh1ex.jpg',
       isAdmin: true,
     })
 

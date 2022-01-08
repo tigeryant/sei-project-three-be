@@ -26,6 +26,8 @@ async function loginUser(req, res, next) {
     return res.status(202).json({
       message: `Welcome Back ${userToLogin.username}`,
       token,
+      _id: userToLogin._id, // test, (actually this is necessary)
+      userInfo: userToLogin, // test
     })
   } catch (err) {
     next(err)

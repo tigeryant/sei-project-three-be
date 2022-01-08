@@ -25,8 +25,8 @@ router.post('/register', auth.register)
 router.post('/login', auth.login)
 
 // profile
-router.route('/profile')
-  .get(profile.getInfo)
+router.route('/profile/:userId')
+  .get(profile.getProfileInfo)
 
 
 export default router
