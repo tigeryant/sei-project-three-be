@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   profileImage: { type: String, required: false },
   isAdmin: { type: Boolean, default: false },
+  // ADD A FAVOURITES ARRAY TO THE USER SCHEMA
+  // TYPE ARRAY
+  // UNIQUE FALSE
+  // REQUIRED TRUE
 })
 
 userSchema.set('toJSON', {

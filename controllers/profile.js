@@ -12,6 +12,7 @@ async function getProfileInfo(req, res, next) {
         // const user = await User.findById(req.body.userId)
         //console.log('your email is: ', req.body.email)
         console.log('req.body: ', req.body)
+        console.log('req: ', req)
 
         // test
         if (user) {
@@ -38,6 +39,9 @@ async function getProfileInfo(req, res, next) {
     }
 }
 
+// ADD A NEW FUNCTION CALLED addFavourite
+
 export default {
     getProfileInfo: getProfileInfo
+    // EXPORT THE addFavouriteFUNCTION
 }

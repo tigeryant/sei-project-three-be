@@ -14,6 +14,8 @@ router.route('/recipes/:recipeId')
   .get(recipes.show)
   // .put(secureRoute, recipes.update)
   // .delete(secureRoute, recipes.delete)
+  // ADD FAVOURITES ROUTE HERE
+  // .post(profile.addFavourite)
 
 router.route('/recipes/:recipeId/comments')
   .post(secureRoute, recipes.commentCreate)

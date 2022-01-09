@@ -22,6 +22,8 @@ const recipeSchema = new mongoose.Schema({
   ingredients: { type: Array, required: true },
   preparation: { type: Array, required: true },
   comments: [commentSchema],
+
+  // we can remove these two fields and what it relates to in seeds.js
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   caughtBy: [{ type: mongoose.Schema.ObjectId, ref: 'User', required: true }],
 })

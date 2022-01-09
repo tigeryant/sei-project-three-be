@@ -20,10 +20,12 @@ async function seed() {
       passwordConfirmation: 'pass',
       profileImage: 'https://res.cloudinary.com/dlqztlbrv/image/upload/v1641490303/ketokitchen-sei-project-3/tvciqususmfbud2sh1ex.jpg',
       isAdmin: true,
+      // INITIALISE THE ADMIN WITH AN EMPTY FAVOURITES ARRAY
     })
 
     console.log('🤖 Admin user created')
 
+    // remove later
     recipeData.forEach(fav => {
       fav.addedBy = user
     })
