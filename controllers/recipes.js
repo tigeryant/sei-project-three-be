@@ -1,7 +1,8 @@
 import { NotFound, Unauthorized } from '../lib/errors.js'
 import Recipe from '../models/recipe.js'
+import User from '../models/user.js'
 
-async function recipeIndex (_req, res, next) {
+async function recipeIndex(_req, res, next) {
   try {
     const recipes = await Recipe.find()
     return res.status(200).json(recipes)
@@ -19,7 +20,7 @@ async function recipeIndex (_req, res, next) {
 //   }
 // }
 
-async function recipeShow (req, res, next) {
+async function recipeShow(req, res, next) {
   const { recipeId } = req.params
   try {
     const shownRecipe = await Recipe.findById(recipeId)
@@ -109,8 +110,51 @@ async function recipeCommentDelete(req, res, next) {
   }
 }
 
+// ADD A NEW FUNCTION CALLED addFavourite
+async function addFavourite(req, res, next) {
+  // find the recipe (specified by req.params)
+  // find the user based on req
+  const { recipeId } = req.params
+  const { currentUser } = req // , currentUserId
+
+  // req.currentUser = user
+  // req.currentUserId = user._id
+
+  // console.log('req.headers: ', req.headers)
+  console.log('trying to add favourite')
+  try {
+    const favouritedRecipe = await Recipe.findById(recipeId)
+    if (!favouritedRecipe) {
+      console.log('throw not found 1')
+      throw new NotFound()
+    }
+
+    // const currentUser = await User.findById(currentUserId)
+    // if (!currentUser) {
+    //   console.log('throw not found 2')
+    //   throw new NotFound()
+    // }
+
+    currentUser.favourites.forEach(currentFavouriteId => {
+      if (favouritedRecipe._id.equals(currentFavouriteId)) {
+        console.log('throw unauthorized')
+        throw new Unauthorized()
+      }
+    })
+
+    currentUser.favourites.push(favouritedRecipe._id)
+    await currentUser.save()
+    return res.status(201).json(currentUser)
+  } catch (err) {
+    console.log('causing error')
+    next(err)
+  }
+}
+
 export default {
   index: recipeIndex,
+  // EXPORT THE addFavouriteFUNCTION
+  addFavourite: addFavourite,
   // create: recipeCreate,
   show: recipeShow,
   // update: recipeEdit,

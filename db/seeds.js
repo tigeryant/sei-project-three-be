@@ -21,6 +21,7 @@ async function seed() {
       profileImage: 'https://res.cloudinary.com/dlqztlbrv/image/upload/v1641490303/ketokitchen-sei-project-3/tvciqususmfbud2sh1ex.jpg',
       isAdmin: true,
       // INITIALISE THE ADMIN WITH AN EMPTY FAVOURITES ARRAY
+      favourites: [],
     })
 
     console.log('🤖 Admin user created')

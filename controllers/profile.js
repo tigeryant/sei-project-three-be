@@ -39,9 +39,8 @@ async function getProfileInfo(req, res, next) {
     }
 }
 
-// ADD A NEW FUNCTION CALLED addFavourite
+
 
 export default {
     getProfileInfo: getProfileInfo
-    // EXPORT THE addFavouriteFUNCTION
 }
