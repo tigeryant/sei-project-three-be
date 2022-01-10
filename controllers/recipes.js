@@ -4,7 +4,7 @@ import Recipe from '../models/recipe.js'
 async function recipeIndex(_req, res, next) {
   try {
     const recipes = await Recipe.find()
-    console.log('type of recipes: ', typeof(recipes))
+    console.log('type of recipes: ', typeof (recipes))
     return res.status(200).json(recipes)
   } catch (err) {
     next(err)
@@ -110,8 +110,7 @@ async function recipeCommentDelete(req, res, next) {
   }
 }
 
-// ADD A NEW FUNCTION CALLED addFavourite
-async function addFavourite(req, res, next) {
+async function toggleFavourite(req, res, next) {
   const { recipeId } = req.params
   const { currentUser, currentUserId } = req
   try {
@@ -137,7 +136,7 @@ async function addFavourite(req, res, next) {
 
 export default {
   index: recipeIndex,
-  addFavourite: addFavourite,
+  toggleFavourite: toggleFavourite,
   // create: recipeCreate,
   show: recipeShow,
   // update: recipeEdit,
