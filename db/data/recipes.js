@@ -662,7 +662,7 @@ export default [
       'If cooking them right away, transfer the marinated turkey to skewers; The wooden skewers should be pre-soaked in cold water to avoid scorching',
       'Preheat your grill or broiler to medium to medium-high heat (Do not use high heat or the brochettes will dry out)',
       'Cook the brochettes, turning several times, for 7 to 10 minutes, or until the meat is nicely colored on all sides (Be careful not to overcook!)',
-      'Serve immediately with the yogurt dip and grilled bell pepper, or wrap in aluminum foil to hold warm.',
+      'Serve immediately with the yogurt dip and grilled bell pepper, or wrap in aluminum foil to hold warm.'
     ],
   },
   {
@@ -685,7 +685,7 @@ export default [
       'Make sure your meat is out of the fridge and at room temperature before you start cooking it',
       'On a separate plate, arrange fresh arugula, halved tomatoes, and pour olive oil and balsamic vinegar into it',
       'Now brush the meat with olive oil, and cook on high heat for 3-5 minutes on each side',
-      'When the meat is ready, season with salt and pepper, and serve with fresh arugula salad.',
+      'When the meat is ready, season with salt and pepper, and serve with fresh arugula salad.'
 
     ],
   },
