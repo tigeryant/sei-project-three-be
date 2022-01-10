@@ -10,11 +10,22 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   profileImage: { type: String, required: false },
   isAdmin: { type: Boolean, default: false },
-  // ADD A FAVOURITES ARRAY TO THE USER SCHEMA - type array, unique false, required true
-  favourites: { type: Array, unique: false, required: true },
 })
 
+userSchema
+  .virtual('favouriteRecipes', {
+    ref: 'Recipe',
+    localField: '_id',
+    foreignField: 'favouritedBy',
+  })
+  .get(function (favouriteRecipes) {
+    if (!favouriteRecipes) return
+
+    return favouriteRecipes
+  })
+
 userSchema.set('toJSON', {
+  virtuals: true,
   transform(_doc, json) {
     delete json.password
     return json

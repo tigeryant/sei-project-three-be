@@ -1,10 +1,10 @@
 import { NotFound, Unauthorized } from '../lib/errors.js'
 import Recipe from '../models/recipe.js'
-import User from '../models/user.js'
 
 async function recipeIndex(_req, res, next) {
   try {
     const recipes = await Recipe.find()
+    console.log('type of recipes: ', typeof(recipes))
     return res.status(200).json(recipes)
   } catch (err) {
     next(err)
@@ -23,7 +23,7 @@ async function recipeIndex(_req, res, next) {
 async function recipeShow(req, res, next) {
   const { recipeId } = req.params
   try {
-    const shownRecipe = await Recipe.findById(recipeId)
+    const shownRecipe = await Recipe.findById(recipeId).populate('favouritedBy')
     if (!shownRecipe) {
       throw new NotFound()
     }
@@ -112,38 +112,23 @@ async function recipeCommentDelete(req, res, next) {
 
 // ADD A NEW FUNCTION CALLED addFavourite
 async function addFavourite(req, res, next) {
-  // find the recipe (specified by req.params)
-  // find the user based on req
   const { recipeId } = req.params
-  const { currentUser } = req // , currentUserId
-
-  // req.currentUser = user
-  // req.currentUserId = user._id
-
-  // console.log('req.headers: ', req.headers)
+  const { currentUser, currentUserId } = req
   try {
-    const favouritedRecipe = await Recipe.findById(recipeId)
-    if (!favouritedRecipe) {
+    const recipeToFavourite = await Recipe.findById(recipeId).populate('favouritedBy')
+    if (!recipeToFavourite) {
       console.log('throw not found 1')
       throw new NotFound()
     }
 
-    // const currentUser = await User.findById(currentUserId)
-    // if (!currentUser) {
-    //   console.log('throw not found 2')
-    //   throw new NotFound()
-    // }
+    if (recipeToFavourite.favouritedBy.find(user => currentUserId.equals(user._id))) {
+      recipeToFavourite.favouritedBy.remove(currentUserId)
+    } else {
+      recipeToFavourite.favouritedBy.push(currentUser)
+    }
 
-    currentUser.favourites.forEach(currentFavouriteId => {
-      if (favouritedRecipe._id.equals(currentFavouriteId)) {
-        console.log('throw unauthorized')
-        throw new Unauthorized()
-      }
-    })
-
-    currentUser.favourites.push(favouritedRecipe._id)
-    await currentUser.save()
-    return res.status(201).json(currentUser)
+    await recipeToFavourite.save()
+    return res.status(201).json(recipeToFavourite)
   } catch (err) {
     console.log('causing error')
     next(err)
@@ -152,7 +137,6 @@ async function addFavourite(req, res, next) {
 
 export default {
   index: recipeIndex,
-  // EXPORT THE addFavouriteFUNCTION
   addFavourite: addFavourite,
   // create: recipeCreate,
   show: recipeShow,
