@@ -11,9 +11,9 @@ async function getProfileInfo(req, res, next) {
 }
 
 async function getFavourites(req, res, next) {
-  const { currentUserId } = req
   try {
-    const user = await User.findById(currentUserId).populate('favouriteRecipes')
+    const { userId } = req.params
+    const user = await User.findById(userId).populate('favouriteRecipes')
     const favouriteRecipes = user.favouriteRecipes
     return res.status(200).json(favouriteRecipes)
   } catch (err) {
