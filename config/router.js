@@ -31,7 +31,7 @@ router.route('/profile/:userId')
   .get(profile.getProfileInfo)
 
 router.route('/profile/:userId/favourites')
-  .get(profile.getFavourites) //secureRoute,)
+  .get(secureRoute, profile.getFavourites)
 
 
 export default router
