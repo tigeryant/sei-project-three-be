@@ -121,7 +121,6 @@ async function addFavourite(req, res, next) {
   // req.currentUserId = user._id
 
   // console.log('req.headers: ', req.headers)
-  console.log('trying to add favourite')
   try {
     const favouritedRecipe = await Recipe.findById(recipeId)
     if (!favouritedRecipe) {
