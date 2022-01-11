@@ -23,7 +23,7 @@ async function recipeIndex(_req, res, next) {
 async function recipeShow(req, res, next) {
   const { recipeId } = req.params
   try {
-    const shownRecipe = await Recipe.findById(recipeId).populate('favouritedBy')
+    const shownRecipe = await Recipe.findById(recipeId).populate('favouritedBy').populate('comments.addedBy')
     if (!shownRecipe) {
       throw new NotFound()
     }
